@@ -1,0 +1,241 @@
+﻿Set,Type,Side 1,Side 2,Side 3,Side 4
+Base,Agent,An Investigator,A Scientist,A Journalist,A Conspiracy Theorist
+Base,Agent,A Designer,An Artisan,A Tailor,An Architect
+Base,Agent,A Twin,A Doppelganger,A Stand-In,An Impostor
+Base,Agent,An Avenger,A Ghost,A Rival,A Vigilante
+Base,Agent,A Caretaker,A Conservationist,A Gardener,A Curator
+Base,Agent,A Villain,A Scoundrel,A Kingpin,A Tyrant
+Base,Agent,A Visionary,An Inventor,A Prophet,A Painter
+Base,Agent,A Beast,A Pet,A Shape-Shifter,A Hedonist
+Base,Agent,A Misfit,A Genius,A Monster,A Demon
+Base,Agent,A Heretic,A Black Sheep,A Witch,A Dissident
+Base,Agent,An Artist,A Dancer,A Writer,A Musician
+Base,Agent,A Guardian,A Bouncer,A Parent,An Officer
+Base,Agent,An Outcast,An Alien,A Foreigner,A Punk
+Base,Agent,A Fool,A Comedian,A Daredevil,A Fraud
+Base,Agent,An Introvert,A Wanderer,A Grump,A Dreamer
+Base,Agent,An Automaton,A Servant,A Puppet,A Machine
+Base,Agent,A Student,A Bookworm,An Apprentice,An Amateur
+Base,Agent,An Idol,A Superhuman,A God,A Model
+Base,Agent,A Hunter,A Researcher,A Killer,A Collector
+Base,Agent,A Companion,A Romantic Partner,A Roommate,A Secret Admirer
+Base,Agent,A Bully,A Predator,A Criminal,A Profiteer
+Base,Agent,An Explorer,A Diplomat,A Tourist,A Trailblazer
+Base,Agent,A Leader,A Boss,A Guide,A Politician
+Base,Agent,A Worker,A Master Craftsperson,A Courier,A Salesperson
+Base,Agent,A Radical,A Warmonger,A Protestor,An Iconoclast
+Base,Agent,An Aristocrat,A Philanthropist,A Magnate,A Celebrity
+Base,Agent,An Addict,A Gambler,A Drunk,A Patient
+Base,Agent,A Healer,A Peacekeeper,A Therapist,A Doctor
+Base,Agent,An Actor,A Performer,An Understudy,A Scam Artist
+Base,Agent,A Survivor,A Victim,A Retiree,A Veteran
+Base,Agent,A Hero,A Mentor,A Martyr,A Rebel
+Base,Agent,An Expert,A Child Prodigy,An Academic,A Virtuoso
+Base,Agent,An Archivist,A Witness,A Librarian,An Archaeologist
+Base,Agent,A Teacher,A Messiah,A hermit,A Holy Person
+Base,Agent,An Enforcer,An Assassin,A Soldier,An Athlete
+Base,Agent,A Merchant,A Miser,A Grifter,An Investor
+Base,Engine,Wants To Control,Wants To Shirk Responsibility For,,
+Base,Engine,Wants To Unravel The Mystery Of,Wants To Spread A Lie About,,
+Base,Engine,Wants To Win A Bet For/With,Wants To Win (Or Win Over),,
+Base,Engine,Wants To Save A Loved One With,Wants To Improve The Reputation Of,,
+Base,Engine,Wants To Follow A Path Leading To,Wants To Restore Former Glory With The Help Of,,
+Base,Engine,Wants To Create (Or Improve),Wants To Destroy,,
+Base,Engine,Wants To Find Redemption In/For,Wants To Find A Way Back To,,
+Base,Engine,Wants To Hurt (Or Damage),Wants To Heal (Or Fix),,
+Base,Engine,Wants To End An Obligation To,Wants To Establish Loyalty Through/In,,
+Base,Engine,Wants To End The Power Of,Wants To Gain The Power Of,,
+Base,Engine,Wants To Hold On To,Wants To Let Go Of,,
+Base,Engine,Wants To Enact A Secret Plan Revolving Around,Wants To Unmask The Conspiracy Of,,
+Base,Engine,Wants To Stop Being Haunted By,Wants To Hide An Obsession With,,
+Base,Engine,Wants To Upstage A Rival With/In,Wants To Commit A Crime With/Involving,,
+Base,Engine,Wants To Protect,Wants To Satisfy An Unspoken Desire For,,
+Base,Engine,Wants To End A Family Obligation To,Wants To Connect With Family Through,,
+Base,Engine,Wants To Erase A Memory Of/With,Wants To Restore A Memory Of/With,,
+Base,Engine,Wants To Steal (Or Steal From),Wants To Stop The Theft Of,,
+Base,Engine,Wants To Gain Fame With/From,Wants To Gain Fortune With/From,,
+Base,Engine,Wants To Help Solve The Problem Of,Wants To Steal A Victory From/With,,
+Base,Engine,Wants To Liberate,Wants To Gain Freedom With/From,,
+Base,Engine,Wants To Reveal The Dangers Of,Wants To Conceal The Dangers Of,,
+Base,Engine,Wants To Betray (Or Betray Someone With),Wants To Deliver Justice With/For,,
+Base,Engine,Wants To Obtain,Wants To Abandon,,
+Base,Engine,Wants To Regain,Wants To Get Rid Of,,
+Base,Engine,Wants To Find Hope In/For,Wants To Bring Despair To/With,,
+Base,Engine,Wants To Destroy The World With,Wants To Destroy Someone's Dream With/For,,
+Base,Engine,Wants To Defeat,Wants To Find Peace With/In/For,,
+Base,Engine,Wants To Be Saved By,Wants To Save,,
+Base,Engine,Wants To Rise To The Challenge Of,Wants To Reveal The Good in,,
+Base,Engine,Wants To Draw Attention To,Wants To Achieve A Dream Involving,,
+Base,Engine,Wants To Get Revenge With/On,Wants To End A Conflict With,,
+Base,Engine,Wants To Save The World With/From,Wants To Save A Life With/From,,
+Base,Engine,Wants To Expose The Secret Of,Wants To Bury The Secret Of,,
+Base,Engine,Wants To Escape,Wants To Find,,
+Base,Engine,Wants To Find Love In/With,Wants To Ease A Heartbreak With/Of,,
+Base,Anchor,A Weapon,A Helmet,A Battleground,A War
+Base,Anchor,A Keepsake,A House,A Basement,A Letter
+Base,Anchor,A Ship,A Shore,An Ocean,A Compass
+Base,Anchor,A Forest,A Seed,A Paradise,A Plant
+Base,Anchor,A Flag,A Decree,A Court,A Nation
+Base,Anchor,A Grave,A Flower,A Puzzle,A Church
+Base,Anchor,A Base,A Recording,A Code,A Government
+Base,Anchor,A Trap,A Forgery,A Cage,A Prison
+Base,Anchor,A Mountain,A Pit,A Sacrifice,A Flask
+Base,Anchor,A Fight,A Shield,An Arena,A Blade
+Base,Anchor,A Construction Site,An Accident,A Piece Of Clothing,A Blueprint
+Base,Anchor,A Tower,A Device,A Battery,A City
+Base,Anchor,An Archive,An Atlas,An Island,A World
+Base,Anchor,A Museum,An Auction Item,An Exhibit,A Necklace
+Base,Anchor,A Cave,A Statue,A Mineral,A Pool
+Base,Anchor,A Cache,A Disaster,A Bag,A Camp
+Base,Anchor,A Costume,A Stage,A Script,A Performance
+Base,Anchor,A Machine,A Button,A Factory,A Job
+Base,Anchor,A Piece of Evidence,A Bomb,A Pen,A Hideout
+Base,Anchor,A Staircase,A Lock,A Tattoo,A Facility
+Base,Anchor,A Coach,A Station,A Suitcase,A Document
+Base,Anchor,A Masterpiece,A Song,An Instrument,A School
+Base,Anchor,A Book,A Riddle,A Word,A Library
+Base,Anchor,A Timepiece,A Date,A Gift,A Pawn Shop
+Base,Anchor,A Map,A Path,A Tunnel,A Ticket
+Base,Anchor,A Hospital,A Death,A Medicine,A Contagion
+Base,Anchor,An Election,A Manifesto,A Name,A Rebellion
+Base,Anchor,A Game,A Maze,An Ambush,A Lost And Found
+Base,Anchor,A Door,A Key,A Portal,An Address
+Base,Anchor,A Tool,A Technique,An Invention,A Workshop
+Base,Anchor,A Prototype,A Company,A Poison,A Laboratory
+Base,Anchor,A Ruin,An Artifact,A Discovery,A Dump
+Base,Anchor,A Shrine,A Vision,A Drug,A Figurine
+Base,Anchor,A Village,A Holy Symbol,A Boat,A Restaurant
+Base,Anchor,A Safe,A Combination,A Fortune,A Bank
+Base,Anchor,A Piece of Furniture,A Curse,A Work of Art,A Hotel
+Base,Conflict,But They Will Have To Confront Prejudice,But They Will Have To Exploit Prejudice,,
+Base,Conflict,But It Will Turn Them Into Someone They Never Wanted To Be,But It Will Take Them Somewhere They Never Wanted To Go,,
+Base,Conflict,But They Will Have To Try Something Frightening And New,"But The Last Time They Tried, It Ended In Humiliation",,
+Base,Conflict,But It Will Mean Risking The Thing Most Precious To Them,But It Will Cost Them Their Soul,,
+Base,Conflict,But It Will Mean Betraying Family,But It Will Mean Forgiving Family,,
+Base,Conflict,But They Will Have To Learn To Trust Again,But They Will Have To Betray A Friend,,
+Base,Conflict,But It Will Mean The Corrption Of Something Pure,But They Must Become What They Fear,,
+Base,Conflict,But They Will Have To Unlearn Something They Were Taught,But They Will Have to Learn Something Difficult,,
+Base,Conflict,But They Must Convince An Enemy To Help Them,But They Will Have To Push A Friend Away,,
+Base,Conflict,But It Will Make A Hypocrite Of Them,But Someone They Love Will Pay The Price,,
+Base,Conflict,But A Terrible Secret Will Come Out,But They Will Have To Keep A Terrible Secret,,
+Base,Conflict,But The Innocent Will Suffer,But It Means Giving Up Their Dream,,
+Base,Conflict,But Everyone Will Assume They Did It For The Wrong Reasons,But No One Will Ever Know The Reasons Why,,
+Base,Conflict,But They Will Have To Do Something They Can Never Tell Anyone About,But It Will Mean Confessing To An Old Sin,,
+Base,Conflict,But They Must Let Go Of An Old Grudge,But They Will Never Forgive Themselves,,
+Base,Conflict,But It Will Mean Breaking A Promise,But They Will Have To Keep A Promise They Have Been Avoiding,,
+Base,Conflict,But They Will Have To Abandon An Important Duty,But Their Community Will Reject Them,,
+Base,Conflict,But They Will Owe Something To Someone They Despise,But First They Must Repair The Damage They Have Done,,
+Base,Conflict,But The Blame Will Fall On Their Closest Friend,But It Will mean Letting Their Greatest Rival Get Ahead,,
+Base,Conflict,But It Means A Good Dead Will Be Punished,But It Means Evil Will Go Unpunished,,
+Base,Conflict,But They Will Have To Turn Against A Mentor,But They Will Have To Act Against A Community They Belong To,,
+Base,Conflict,But They Must Let Go Of Something They Are Holding On To,But They Must Take Up A Burden They Have Been Avoiding,,
+Base,Conflict,But They Must Leave The Familiar Behind And Face The Unknown,But They must Face What They Have Been Running From,,
+Base,Conflict,But They Will Have To Make A Promise They Know They Cannot Keep,But They Must Swear Loyalty To Something or Someone They Abhor,,
+Base,Conflict,But It Will Cost Them Their Mental Health,But It Will Cost Them Their Physical Health,,
+Base,Conflict,But They Will Have to Break A Societal Rule,But They Will Have To Break A Personal Rule,,
+Base,Conflict,But It Will Gain The Attention Of Their Enemy,But They Will Lose The Respect Of Someone They Admire,,
+Base,Conflict,But They Will Have To Endure Something That Repulses Them,But They Will Have To Resist A Great Temptation,,
+Base,Conflict,But They Must Reconcile With An Old Enemy,But They Will Lose Their Closest Friend,,
+Base,Conflict,But It Will Mean Forever Living A Lie,But They Will Have To Stop Living A Lie,,
+Base,Conflict,But They Will Likely Lose Their Life,But They Will lose Their Life's Work,,
+Base,Conflict,But It Will Mean Paying Someone Else's Debts,But It Will Mean Taking On A Debt They Cannot Pay,,
+Base,Conflict,But They Must Find Something They Lost Long Ago,But They must Accept A Loss They Have Been In Denial About,,
+Base,Conflict,But It Will Cost Their Self-Respect,But It Will Cost Their Reputation,,
+Base,Conflict,But They Will Bear The Scars For All To See,But They Will Be Hurt In Ways No One Can See,,
+Base,Conflict,But They Must Face Their Deepest Fear,But It Will Cost Them The World They Know,,
+Base,Aspect,Destructive,Complex,Vibrant,Overlooked
+Base,Aspect,Distant,Wild,Rare,Collapsing
+Base,Aspect,Unnerving,Disturbed,Well-Loved,Protected
+Base,Aspect,Greedy,Young,Chilling,Vast
+Base,Aspect,Private,Crude,Unexpected,Damaged
+Base,Aspect,Giant,Charmed,Bitter,Long-Lost
+Base,Aspect,Traumatic,Misunderstood,Gilded,Revolutionary
+Base,Aspect,Secret,Generous,Illusory,Scarred
+Base,Aspect,Controlling,Fallen,Enchanted,Ornate
+Base,Aspect,Wealthy,Trapped,Mysterious,Invisible
+Base,Aspect,Harsh,Determined,Seductive,Shadowy
+Base,Aspect,Wounded,Foul-Mouthed,Simple,Fierce
+Base,Aspect,Fiery,Humble,Divine,Precious
+Base,Aspect,Ethereal,Clever,Passionate,Dire
+Base,Aspect,Truth-Telling,Ominous,Nurturing,Elegant
+Base,Aspect,Impulsive,Fascinating,Burning,Elusive
+Base,Aspect,Fortune-Telling,Bloody,Inspired,Honest
+Base,Aspect,Controversial,Swift,Famous,Durable
+Base,Aspect,Blighted,Thoughtful,Icy,Brilliant
+Base,Aspect,Ancient,Shocking,Talkative,Healing
+Base,Aspect,Protective,Empty,Faithful,Deceptive
+Base,Aspect,Panic-Inducing,Rejuvenating,Curious,Charming
+Base,Aspect,Glorious,Cloying,Wish-Granting,Treacherous
+Base,Aspect,Unlucky,Indestructible,Corrupted,Ghostly
+Base,Aspect,Hardened,Defeated,Miraculous,Outgoing
+Base,Aspect,Tormented,Silent,Frozen,Stalwart
+Base,Aspect,Irreplaceable,Harmless,Powerful,Broken
+Base,Aspect,Possessed,Kind,Beautiful,Decrepit
+Base,Aspect,Fickle,Hated,Innovating,Mighty
+Base,Aspect,Obsessive,Belligerent,Forgotten,Holy
+Base,Aspect,Haunted,Peaceful,Pety,Valuable
+Base,Aspect,Vindictive,Influential,Arcane,Decoy
+Base,Aspect,Fragile,Cursed,Keen,Blessed
+Base,Aspect,Cut-Rate,Cheery,Surprising,Besieged
+Base,Aspect,Whispering,Irritating,Shape-Shifting,Benevolent
+Base,Aspect,Pensive,Shatered,Tender,Fearless
+SciFi,Agent,A Navigator,An Astrophysicist,A Data Scientist,A Technician
+SciFi,Agent,An Extra-Terrestrial,A Telepath,An Invader,A Scientist
+SciFi,Agent,A Hacker,A Revolutionary,A Heist Leader,A Blackmailer
+SciFi,Agent,An Escaped Experiment,A Bomb-Maker,A Gene Splicer,A Pyrokinetic
+SciFi,Agent,A Salvager,An Engineer,An Arms Dealer,An Asteroid Miner
+SciFi,Agent,A Colonist,A Cadet,A Chemist,A Weapons Specialist
+SciFi,Agent,A Graffiti Artist,A Bartender,A Clubber,A D.J.
+SciFi,Agent,A Robot,An Artificial Intelligence,A Supercomputer,A Bodyguard
+SciFi,Agent,A Streamer,A Performance Artist,An Influencer,A Gamer
+SciFi,Agent,A Pilot,A Comms Operator,A General,An Operative
+SciFi,Agent,A Prisoner,A Test Subject,A Telekenetic,A Programmer
+SciFi,Agent,A Chrononaut,A Translator,A C.E.O.,A Terrorist
+SciFi,Engine,Wants To Unseat A Politician With,Wants To Make A Power Grab With,,
+SciFi,Engine,Wants To Plant A Bomb On/In,Wants To Find The Bomb Planted On/By,,
+SciFi,Engine,Wants To Uncover A Government Secret Involving,Wants To Topple A Government With,,
+SciFi,Engine,Wants To Carry Out An Invasion Of/With,Wants To Track Down,,
+SciFi,Engine,Wants To Conduct Blackmail On/With,Wants To Arrange The Release Of,,
+SciFi,Engine,Wants To Explore A New Planet With The Help Of,Wants To Pull Off A Heist On/With/Of,,
+SciFi,Engine,Wants To Invent (Or Discover),Wants To Win A race Involving,,
+SciFi,Engine,Wants To Change The Past Of/With,Wants To Change The Future Of/With,,
+SciFi,Engine,Wants To Restore The Lost Memory Of,Wants to Communicate With An Alient Species Through,,
+SciFi,Engine,Wants To Create A Distraction With,Wants To Perform An Assassination Of/With,,
+SciFi,Engine,Wants To Upgrade The Tech Of,Wants To Make A Major Reseach Breakthrough On/With,,
+SciFi,Engine,Wants To Make A Weapon Out Of,Wants The Rare Material They Can Only Get From,,
+SciFi,Anchor,A Nebula,A Cloaking Device,A Set Of Coordinates,An Energy Shield
+SciFi,Anchor,An Engine,An Algorithm,A Spaceport,A Fuel Source
+SciFi,Anchor,A Metropolis,A High-Rise,A Jetpack,A Hover Vehicle
+SciFi,Anchor,A Drone,A Blaster,A Dropship,A Control Tower
+SciFi,Anchor,A Planet,An Organism,A Serum,A Biome
+SciFi,Anchor,A Reactor,A Machine Part,An Energy Weapon,A Countdown
+SciFi,Anchor,A Beacon,An Explosive,A Hidden Compartment,A Simulation
+SciFi,Anchor,A Spaceship,A Spacesuit,A Laser,A Jump Point
+SciFi,Anchor,A Network,A Server Room,A Hard Drive,A Power Plant
+SciFi,Anchor,A Cryo Pod,A Star System,A Body Modification,An Exo-Skeleton
+SciFi,Anchor,A Time Machine,A Particle,A Cipher,A Satellite
+SciFi,Anchor,A Chemical,A Black Hole,A Gene,A Gas Giant
+SciFi,Conflict,But They Will Be Cut Off From The Network Forever,But They Will Never Be Able To Travel Off-World Again,,
+SciFi,Conflict,But It Will Mean Trusting Someone Who Betrayed Them,But They Will Have To Live The Rest Of Their Life Doing A Job They Hate,,
+SciFi,Conflict,But They Will Be Blacklisted,But The Blowback Will Fall On Their Closest Friend,,
+SciFi,Conflict,But it Will Make Their Timeline Dangerously Unstable,But It Will Mean Giving Up The Chance To Fix Their Biggest Regret,,
+SciFi,Conflict,But It Will Start A War,But It Would Mean Giving up A Fight,,
+SciFi,Conflict,But It Will Introduce A Dangerous Technology To The World,But It Will Mean Rioting In The Streets,,
+SciFi,Conflict,But It Will Be The Only Thing They Are Remembered For,But It Will Cost Them Their Last Connection To Humanity,,
+SciFi,Conflict,But it Will Unite Their Enemies,But It Will Cause A Rift Amongst Their Allies,,
+SciFi,Conflict,But A Criminal Will Go Free,But An Innocent Person Will Be Executed,,
+SciFi,Conflict,But A Widely Used Technology Will Become Unstable,But A Deadly Experiment Will be Released From Containment,,
+SciFi,Conflict,But They Will Lose The Person Closest To Them,But It Will Set A Mass Extermination In Motion,,
+SciFi,Conflict,But It Will Make Them A Fugitive,But It Will Mean Joining The Enemy,,
+SciFi,Aspect,Digital,Phasing,Gifted,Black Market
+SciFi,Aspect,Disappearing,Explosive,Aquatic,Xenophobic
+SciFi,Aspect,New,Reckless,Self-Destructive,Secretive
+SciFi,Aspect,Alien,Time-Manipulating,Despotic,Infected
+SciFi,Aspect,Anomalous,Zero-Gravity,Experimental,Gestating
+SciFi,Aspect,Uncharted,Overloaded,Tracked,Infested
+SciFi,Aspect,Dark,Viral,Hovering,Telekinetic
+SciFi,Aspect,Expanding,Government-Backed,Turbo-Charged,Hyper-Intelligent
+SciFi,Aspect,Mobile,Privately Owned,Addictive,Smart
+SciFi,Aspect,Unassuming,Top-Of-The-Line,Long-Range,Unlisted
+SciFi,Aspect,Radical,Refurbished,Advanced,Rich
+SciFi,Aspect,Poor,Cutting-Edge,Blacklisted,Untraceable
