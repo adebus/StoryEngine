@@ -13,31 +13,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type cardAgent struct {
-	side1 string
-	side2 string
-	side3 string
-	side4 string
-}
-
-type cardEngine struct {
-	side1 string
-	side2 string
-}
-
-type cardAnchor struct {
-	side1 string
-	side2 string
-	side3 string
-	side4 string
-}
-
-type cardConflict struct {
-	side1 string
-	side2 string
-}
-
-type cardAspect struct {
+type card struct {
 	side1 string
 	side2 string
 	side3 string
@@ -85,6 +61,9 @@ func rootRun(cmd *cobra.Command, args []string) {
 
 	scanner := bufio.NewScanner(inFile)
 	
+	// Define the Map we're going to use
+	cardMap := map[string]map[string][]card{}
+	
 	var (
 		agentCount int = 0
 		engineCount int = 0
@@ -93,8 +72,20 @@ func rootRun(cmd *cobra.Command, args []string) {
 		aspectCount int = 0
 	)
 
+	// Iterate through the file one line at a time
 	for scanner.Scan() {
+		// Split the line on commas
 		line := strings.Split(scanner.Text(),",")
+
+		// Check and see if we've seen the current set before, if we haven't initialize the sub-map.
+		if _, ok := cardMap[line[0]]; !ok {
+			cardMap[line[0]] = map[string][]card{}
+		}
+
+		// Add the card to the map
+		cardMap[line[0]][line[1]] = append(cardMap[line[0]][line[1]], newCard(line[2:]))
+
+		// Just get me some basic counts for sanity checking
 		switch cardType := line[1]; cardType {
 		case "Agent":
 			agentCount++
@@ -111,11 +102,19 @@ func rootRun(cmd *cobra.Command, args []string) {
 		}
 	}
 
+	// Show me my counts
 	fmt.Println("Number of Agents: ", agentCount)
 	fmt.Println("Number of Engines: ", engineCount)
 	fmt.Println("Number of Anchors: ", anchorCount)
 	fmt.Println("Number of Conflicts: ", conflictCount)
 	fmt.Println("Number of Aspects: ", aspectCount)
+
+	// Validate that data is getting where I think it should be
+	fmt.Println("Number of items in cardMap['Base']['Agent']: ", len(cardMap["Base"]["Agent"]))
+	fmt.Println("Number of items in cardMap['SciFi']['Agent']: ", len(cardMap["SciFi"]["Agent"]))
+	fmt.Println("The first item in cardMap['Base']['Agent']: ", cardMap["Base"]["Agent"][0])
+	fmt.Println("The first item in cardMap['SciFi']['Engine']: ", cardMap["SciFi"]["Engine"][0])
+
 }
 
 func init() {
@@ -135,31 +134,16 @@ func init() {
 }
 
 // Create a new instance of the cardAgent struct
-func newAgent(s1 string, s2 string, s3 string, s4 string) *cardAgent {
-	c := cardAgent{side1: s1, side2: s2, side3: s3, side4: s4}
-	return &c
-}
-
-// Create a new instance of the cardEngine struct
-func newEngine(s1 string, s2 string) *cardEngine {
-	c := cardEngine{side1: s1, side2: s2}
-	return &c
-}
-
-// Create a new instance of the cardAnchor struct
-func newAnchor(s1 string, s2 string, s3 string, s4 string) *cardAnchor {
-	c := cardAnchor{side1: s1, side2: s2, side3: s3, side4: s4}
-	return &c
-}
-
-// Create a new instance of the cardConflict struct
-func newConflict(s1 string, s2 string) *cardConflict {
-	c := cardConflict{side1: s1, side2: s2}
-	return &c
-}
-
-// Create a new instance of the cardAspect struct
-func newAspect(s1 string, s2 string, s3 string, s4 string) *cardAspect {
-	c := cardAspect{side1: s1, side2: s2, side3: s3, side4: s4}
-	return &c
+func newCard(side []string) card {
+	var c card
+	
+	if len(side) > 2 {
+		// This is a 4 sided card
+		c = card{side1: side[0], side2: side[1], side3: side[2], side4: side[3]}
+	} else {
+		// This is a 2 sided card
+		c = card{side1: side[0], side2: side[1]}
+	}
+	
+	return c
 }
