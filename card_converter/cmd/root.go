@@ -4,20 +4,21 @@ Copyright © 2023 Adam Debus
 package cmd
 
 import (
-	"bufio"
+	"encoding/csv"
+	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"os"
-	"strings"
 
 	"github.com/spf13/cobra"
 )
 
-type card struct {
-	side1 string
-	side2 string
-	side3 string
-	side4 string
+type Card struct {
+	Side1 string
+	Side2 string
+	Side3 string
+	Side4 string
 }
 
 var (
@@ -59,10 +60,11 @@ func rootRun(cmd *cobra.Command, args []string) {
 	checkErr(err, "Unable to open the input file")
 	defer inFile.Close()
 
-	scanner := bufio.NewScanner(inFile)
+	//scanner := bufio.NewScanner(inFile)
+	csvReader := csv.NewReader(inFile)
 	
 	// Define the Map we're going to use
-	cardMap := map[string]map[string][]card{}
+	cardMap := map[string]map[string][]Card{}
 	
 	var (
 		agentCount int = 0
@@ -73,13 +75,25 @@ func rootRun(cmd *cobra.Command, args []string) {
 	)
 
 	// Iterate through the file one line at a time
-	for scanner.Scan() {
-		// Split the line on commas
-		line := strings.Split(scanner.Text(),",")
+	for {
+
+		line, err := csvReader.Read()
+
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			checkErr(err, "Encountered an error reading the line")
+		}
 
 		// Check and see if we've seen the current set before, if we haven't initialize the sub-map.
 		if _, ok := cardMap[line[0]]; !ok {
-			cardMap[line[0]] = map[string][]card{}
+			cardMap[line[0]] = map[string][]Card{}
+		}
+
+		// Validate that the type of card is valid
+		if line[1] != "Agent" && line[1] != "Engine" && line[1] != "Anchor" && line[1] != "Conflict" && line[1] != "Aspect" {
+			fmt.Println("Line does not have a valid card type: ", line[1])
 		}
 
 		// Add the card to the map
@@ -109,11 +123,41 @@ func rootRun(cmd *cobra.Command, args []string) {
 	fmt.Println("Number of Conflicts: ", conflictCount)
 	fmt.Println("Number of Aspects: ", aspectCount)
 
+	// Iterate through the maps and print how many cards of each type we have.
+	// for key, value := range cardMap {
+	// 	for key2, value2 := range value {
+	// 		fmt.Printf("Number if items in cardMap[\"%v\"][\"%v\"]: %v\n", key, key2, len(value2))
+	// 	}
+		
+	// }
+
 	// Validate that data is getting where I think it should be
-	fmt.Println("Number of items in cardMap['Base']['Agent']: ", len(cardMap["Base"]["Agent"]))
-	fmt.Println("Number of items in cardMap['SciFi']['Agent']: ", len(cardMap["SciFi"]["Agent"]))
 	fmt.Println("The first item in cardMap['Base']['Agent']: ", cardMap["Base"]["Agent"][0])
 	fmt.Println("The first item in cardMap['SciFi']['Engine']: ", cardMap["SciFi"]["Engine"][0])
+
+	// Iterate through the maps and format each array as JSON and write the appropriate file
+	for cardSet, value := range cardMap {
+		for cardType, value2 := range value {
+
+			fmt.Println("Processing "+cardSet+" - "+cardType+"...")
+
+			fmt.Printf("Number if items in cardMap[\"%v\"][\"%v\"]: %v\n", cardSet, cardType, len(value2))
+
+			outfile := cardSet+"-"+cardType+".json"
+
+			fileData, err := json.MarshalIndent(value2, "", "\t")
+			if err != nil {
+				checkErr(err, "Error marshalling JSON")
+			}
+
+			err = os.WriteFile(outputDir+"/"+outfile, fileData, 0644)
+			if  err != nil {
+				checkErr(err, "Error writing file")
+			}
+
+			fmt.Println("...Done")
+		}
+	}
 
 }
 
@@ -134,15 +178,15 @@ func init() {
 }
 
 // Create a new instance of the cardAgent struct
-func newCard(side []string) card {
-	var c card
+func newCard(side []string) Card {
+	var c Card
 	
 	if len(side) > 2 {
 		// This is a 4 sided card
-		c = card{side1: side[0], side2: side[1], side3: side[2], side4: side[3]}
+		c = Card{Side1: side[0], Side2: side[1], Side3: side[2], Side4: side[3]}
 	} else {
 		// This is a 2 sided card
-		c = card{side1: side[0], side2: side[1]}
+		c = Card{Side1: side[0], Side2: side[1]}
 	}
 	
 	return c
