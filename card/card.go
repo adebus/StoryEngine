@@ -2,6 +2,7 @@ package card
 
 import (
 	"errors"
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -19,40 +20,40 @@ type Card4 struct {
 }
 
 type Card interface {
-	RandomSide() string
+	RandomSide() (string, error)
 }
 
-func (c Card2) RandomSide() string {
+func (c Card2) RandomSide() (string, error) {
 	r := rand.New(rand.NewSource(time.Now().Unix()))
 	n := r.Intn(2)
 
 	switch n {
 	case 0:
-		return c.Side1
+		return c.Side1, nil
 	case 1:
-		return c.Side2
+		return c.Side2, nil
 	}
-	return ""
+	return "", fmt.Errorf("received an unexpected side number: %v", n)
 }
 
-func (c Card4) RandomSide() string {
+func (c Card4) RandomSide() (string, error) {
 	r := rand.New(rand.NewSource(time.Now().Unix()))
 	n := r.Intn(4)
 
 	switch n {
 	case 0:
-		return c.Side1
+		return c.Side1, nil
 	case 1:
-		return c.Side2
+		return c.Side2, nil
 	case 2:
-		return c.Side3
+		return c.Side3, nil
 	case 3:
-		return c.Side4
+		return c.Side4, nil
 	}
-	return ""
+	return "", fmt.Errorf("received an unexpected side number: %v", n)
 }
 
-func New(sides []string) (Card,error) {
+func New(sides []string) (Card, error) {
 	var c Card
 
 	if len(sides) == 4 {
