@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./card
 	./card_converter
 	./story_engine
 )

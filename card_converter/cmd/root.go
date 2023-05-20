@@ -12,14 +12,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/adebus/StoryEngine/card"
 )
-
-type Card struct {
-	Side1 string
-	Side2 string
-	Side3 string
-	Side4 string
-}
 
 var (
 	// Input file
@@ -64,7 +58,7 @@ func rootRun(cmd *cobra.Command, args []string) {
 	csvReader := csv.NewReader(inFile)
 	
 	// Define the Map we're going to use
-	cardMap := map[string]map[string][]Card{}
+	cardMap := map[string]map[string][]card.Card{}
 	
 	var (
 		agentCount int = 0
@@ -88,7 +82,7 @@ func rootRun(cmd *cobra.Command, args []string) {
 
 		// Check and see if we've seen the current set before, if we haven't initialize the sub-map.
 		if _, ok := cardMap[line[0]]; !ok {
-			cardMap[line[0]] = map[string][]Card{}
+			cardMap[line[0]] = map[string][]card.Card{}
 		}
 
 		// Validate that the type of card is valid
@@ -97,7 +91,17 @@ func rootRun(cmd *cobra.Command, args []string) {
 		}
 
 		// Add the card to the map
-		cardMap[line[0]][line[1]] = append(cardMap[line[0]][line[1]], newCard(line[2:]))
+		var c card.Card
+		if line[4] == "" && line[5] == "" {
+			c, err = card.New(line[2:4])
+		} else {
+			c, err = card.New(line[2:])
+		}
+		
+		if err != nil {
+			checkErr(err, "Encountered an error creating the new card")
+		}
+		cardMap[line[0]][line[1]] = append(cardMap[line[0]][line[1]], c)
 
 		// Just get me some basic counts for sanity checking
 		switch cardType := line[1]; cardType {
@@ -123,25 +127,13 @@ func rootRun(cmd *cobra.Command, args []string) {
 	fmt.Println("Number of Conflicts: ", conflictCount)
 	fmt.Println("Number of Aspects: ", aspectCount)
 
-	// Iterate through the maps and print how many cards of each type we have.
-	// for key, value := range cardMap {
-	// 	for key2, value2 := range value {
-	// 		fmt.Printf("Number if items in cardMap[\"%v\"][\"%v\"]: %v\n", key, key2, len(value2))
-	// 	}
-		
-	// }
-
-	// Validate that data is getting where I think it should be
-	fmt.Println("The first item in cardMap['Base']['Agent']: ", cardMap["Base"]["Agent"][0])
-	fmt.Println("The first item in cardMap['SciFi']['Engine']: ", cardMap["SciFi"]["Engine"][0])
-
 	// Iterate through the maps and format each array as JSON and write the appropriate file
 	for cardSet, value := range cardMap {
 		for cardType, value2 := range value {
 
-			fmt.Println("Processing "+cardSet+" - "+cardType+"...")
+			//fmt.Println("Processing "+cardSet+" - "+cardType+"...")
 
-			fmt.Printf("Number if items in cardMap[\"%v\"][\"%v\"]: %v\n", cardSet, cardType, len(value2))
+			//fmt.Printf("Number if items in cardMap[\"%v\"][\"%v\"]: %v\n", cardSet, cardType, len(value2))
 
 			outfile := cardSet+"-"+cardType+".json"
 
@@ -155,7 +147,7 @@ func rootRun(cmd *cobra.Command, args []string) {
 				checkErr(err, "Error writing file")
 			}
 
-			fmt.Println("...Done")
+			//fmt.Println("...Done")
 		}
 	}
 
@@ -175,19 +167,4 @@ func init() {
 	rootCmd.Flags().StringVarP(&outputDir, "outputdir", "o", "", "The directory to write the JSON files")
 	rootCmd.MarkFlagRequired("inputfile")
 	rootCmd.MarkFlagRequired("outputdir")
-}
-
-// Create a new instance of the cardAgent struct
-func newCard(side []string) Card {
-	var c Card
-	
-	if len(side) > 2 {
-		// This is a 4 sided card
-		c = Card{Side1: side[0], Side2: side[1], Side3: side[2], Side4: side[3]}
-	} else {
-		// This is a 2 sided card
-		c = Card{Side1: side[0], Side2: side[1]}
-	}
-	
-	return c
 }

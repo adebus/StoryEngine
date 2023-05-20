@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "debug",
             "program": "card_converter/main.go",
-            "args": ["-i", "/Users/adebus/go/src/github.com/adebus/StoryEngine/data/Story_Engine_Cards.csv",  "-o", "/Users/adebus/go/src/github.com/adebus/StoryEngine/data"]
-            }
+            "args": ["-i", "/Users/adebus/go/src/github.com/adebus/StoryEngine/data/Story_Engine_Cards.csv",  "-o", "/Users/adebus/go/src/github.com/adebus/StoryEngine/data/json"]
+        }
     ]
 }
